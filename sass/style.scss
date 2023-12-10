@@ -1,0 +1,76 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+@mixin before_circle {
+    &:before {
+        content: '';
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background: $main-color;
+        border-radius: 100%;
+        z-index: -1;
+        left: 0;
+        top: -25%;
+    }
+}
+
+$main-color: #FFA501;
+$hover-color: hwb(39 38% 7%);
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.devider {
+    margin: 25px auto 0 auto;
+    width: 60px;
+    height: 6px;
+    background-color: $main-color;
+}
+@media (max-width: 992px) {
+    .devider {
+        margin: 15px auto 0 auto;
+    }
+}
+
+
+@import 'blocks/title';
+@import "blocks/buttons";
+@import "blocks/sidepanel";
+@import "blocks/menu";
+@import 'blocks/promo';
+@import 'blocks/about';
+@import 'blocks/resume';
+@import 'blocks/skills';
+@import 'blocks/portfolio';
+@import 'blocks/price';
+@import 'blocks/contacts';
